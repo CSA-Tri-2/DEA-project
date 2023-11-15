@@ -1,0 +1,54 @@
+<mxfile host="65bd71144e">
+    <diagram id="b9cXjSiO6sRkVTvVNRnv" name="Page-1">
+        <mxGraphModel dx="1095" dy="512" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="7" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="3">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="95" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="4">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="420" y="230" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="295" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="5">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="515" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="6">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="735" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="Sorting Class&lt;hr&gt;arr&lt;br&gt;animations&lt;br&gt;result&lt;br&gt;toString()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="355" y="60" width="120" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="BubbleSort" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="35" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Insertion Sort" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="235" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="MergeSort" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="455" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="QuickSort" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="675" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
