@@ -1,12 +1,14 @@
 package com.nighthawk.spring_portfolio.mvc.sorting.SortingAlgorithms;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.nighthawk.spring_portfolio.mvc.sorting.SortingAnimationGenerator; 
 
 public class MergeSort extends SortingAnimationGenerator {
-    public MergeSort() {
-        super();
+    private ArrayList<HashMap<String, ArrayList<Integer>>> animations;
+    public MergeSort(int lenth) {
+        super(length);
     }
 
     public void mergeSortAnimaion(int start, int end) {
@@ -21,7 +23,31 @@ public class MergeSort extends SortingAnimationGenerator {
 
     public void merge(int start, int mid, int end) {
         int start2 = mid + 1;
-        
+        if (arr.get(start2) >= arr.get(start)) {
+            return ;
+        }
+        while (start <= mid && start2 <= end+1) {
+            HashMap<String, ArrayList<Integer>> animationEntry = new HashMap<String, ArrayList<Integer>>();
+            ArrayList<Integer> pair = new ArrayList<Integer>();
+            pair.add(start);
+            pair.add(start2);
+            if (arr.get(start) <= arr.get(start2)) {
+                
+                start++;
+            } else {
+                int temp = arr.get(start2);
+                int index = start2;
+                while (index > start) {
+                    arr.set(index, arr.get(index--));
+                }
+                arr.set(index, temp);
+                start++;
+                mid++;
+                start2++;
+            }
+            animationEntry.put("arr", arr);
+            animationEntry.put("pair", pair); 
+        }
 
     }
 }
