@@ -5,6 +5,15 @@ import java.util.HashMap;
 
 import com.nighthawk.spring_portfolio.mvc.sorting.SortingAnimationGenerator; 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Data
 public class MergeSort extends SortingAnimationGenerator {
     private ArrayList<HashMap<String, ArrayList<Integer>>> animations;
     public MergeSort(int length) {

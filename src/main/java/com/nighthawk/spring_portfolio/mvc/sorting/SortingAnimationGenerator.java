@@ -15,7 +15,6 @@ import java.util.Collections;
 
 public class SortingAnimationGenerator {
     protected ArrayList<Integer> arr;
-    protected ArrayList<ArrayList<Integer>> animations;
 
     public SortingAnimationGenerator(int length) {
         arr = new ArrayList<Integer>();
