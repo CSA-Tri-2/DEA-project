@@ -3,7 +3,7 @@ package com.nighthawk.spring_portfolio.mvc.sorting.SortingAlgorithms;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.nighthawk.spring_portfolio.mvc.sorting.SortingAnimationGenerator; 
+import com.nighthawk.spring_portfolio.mvc.sorting.SortingAnimationGenerator;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +18,7 @@ public class MergeSort extends SortingAnimationGenerator {
     private ArrayList<HashMap<String, ArrayList<Integer>>> animations;
     public MergeSort(int length) {
         super(length);
+        animations = new ArrayList<HashMap<String, ArrayList<Integer>>>();
     }
 
     public void mergeSortAnimation(int start, int end) {
