@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.nighthawk.spring_portfolio.mvc.sorting.MergeRequest;
+
+import com.nighthawk.spring_portfolio.mvc.sorting.SortingAlgorithms.MergeSort;
 
 @RestController
 @RequestMapping("/api/sorting")
@@ -21,6 +22,10 @@ public class SortingApiController {
 
     @GetMapping("/merge")
     public ResponseEntity<ArrayList<HashMap<String, ArrayList<Integer>>>> getMergeAnimations(@RequestBody MergeRequest request) {
-        
+        int length = request.getLength();
+        MergeSort mergeSort = new MergeSort(length);
+        mergeSort.mergeSortAnimation(0, length-1);
+        return new ResponseEntity<>(mergeSort.getAnimations(), HttpStatus.OK);
+
     }
 }

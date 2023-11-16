@@ -12,7 +12,6 @@ import java.util.Collections;
 @AllArgsConstructor
 @ToString
 @Data
-
 public class SortingAnimationGenerator {
     protected ArrayList<Integer> arr;
 

@@ -9,7 +9,5 @@ import java.util.ArrayList;
 
 public class fibbionacci {
     protected ArrayList<Integer> arr;
-
-    return 0;
 }
 
