@@ -11,11 +11,11 @@ public class MergeSort extends SortingAnimationGenerator {
         super(length);
     }
 
-    public void mergeSortAnimaion(int start, int end) {
+    public void mergeSortAnimation(int start, int end) {
         if (start < end) {
             int middle = (start+end)/2;
-            mergeSortAnimaion(start, middle);
-            mergeSortAnimaion(middle+1, end);
+            mergeSortAnimation(start, middle);
+            mergeSortAnimation(middle+1, end);
             merge(start, middle, end);
         }
         
@@ -47,6 +47,7 @@ public class MergeSort extends SortingAnimationGenerator {
             }
             animationEntry.put("arr", arr);
             animationEntry.put("pair", pair); 
+            animations.add(animationEntry);
         }
 
     }

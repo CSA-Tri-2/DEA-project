@@ -18,6 +18,7 @@ public class SortingAnimationGenerator {
     protected ArrayList<ArrayList<Integer>> animations;
 
     public SortingAnimationGenerator(int length) {
+        arr = new ArrayList<Integer>();
         for (int i = 0; i < length; i++) {
             arr.add(i);
         }
