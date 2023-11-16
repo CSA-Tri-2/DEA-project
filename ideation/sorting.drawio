@@ -1,17 +1,17 @@
 <mxfile host="65bd71144e">
     <diagram id="b9cXjSiO6sRkVTvVNRnv" name="Page-1">
-        <mxGraphModel dx="1095" dy="512" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1413" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="7" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="3">
+                <mxCell id="7" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="3" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="95" y="210"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="8" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="4">
+                <mxCell id="8" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="4" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="420" y="230" as="targetPoint"/>
                         <Array as="points">
@@ -19,34 +19,82 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="10" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="5">
+                <mxCell id="10" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="5" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="515" y="210"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="11" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="6">
+                <mxCell id="11" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="6" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="735" y="210"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="2" value="Sorting Class&lt;hr&gt;arr&lt;br&gt;animations&lt;br&gt;result&lt;br&gt;toString()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="2" value="Sorting Class&lt;hr&gt;arr&lt;br&gt;animations&lt;br&gt;result&lt;br&gt;toString()" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="355" y="60" width="120" height="150" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="BubbleSort" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="3" value="BubbleSort" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="35" y="300" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="Insertion Sort" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="4" value="Insertion Sort" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="235" y="300" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="MergeSort" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="5" value="MergeSort" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="455" y="300" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="QuickSort" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="6" value="QuickSort" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="675" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Fibonacci Class&lt;hr&gt;arr&lt;br&gt;result&lt;br&gt;toString()" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1215" y="60" width="120" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="18">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="955" y="210"/>
+                        </Array>
+                        <mxPoint x="1270" y="210" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="19">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1280" y="240" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1155" y="210"/>
+                        </Array>
+                        <mxPoint x="1275" y="210" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="20">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1375" y="210"/>
+                        </Array>
+                        <mxPoint x="1270" y="210" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="21">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1595" y="210"/>
+                        </Array>
+                        <mxPoint x="1275" y="210" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="For Loop" style="whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+                    <mxGeometry x="895" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="While Loop" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1095" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Recursion Loop" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1315" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Stream Loop" style="whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+                    <mxGeometry x="1535" y="300" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
