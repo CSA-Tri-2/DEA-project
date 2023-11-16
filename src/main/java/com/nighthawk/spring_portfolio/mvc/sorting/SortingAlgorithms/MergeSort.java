@@ -7,7 +7,7 @@ import com.nighthawk.spring_portfolio.mvc.sorting.SortingAnimationGenerator;
 
 public class MergeSort extends SortingAnimationGenerator {
     private ArrayList<HashMap<String, ArrayList<Integer>>> animations;
-    public MergeSort(int lenth) {
+    public MergeSort(int length) {
         super(length);
     }
 
