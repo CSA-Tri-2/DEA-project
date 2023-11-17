@@ -19,15 +19,14 @@ public class MergeSort extends SortingAnimationGenerator {
 
     public MergeSort(int length) {
         super(length);
-        animations = new ArrayList<>();
-        HashMap<String, ArrayList<Integer>> animationEntry = new HashMap<>();
-        ArrayList<Integer> pair = new ArrayList<>();
+        animations = new ArrayList<>(); 
         addAnimationEntry(arr, -1, -1);
         this.mergeSortAnimation(0, length-1);
         addAnimationEntry(arr, -1, -1);
 
     }
 
+    // Add an animation entry to the Animations arraylist.
     public void addAnimationEntry(ArrayList<Integer> sortedArr, int start, int end) {
         HashMap<String, ArrayList<Integer>> animationEntry = new HashMap<>();
         ArrayList<Integer> pair = new ArrayList<>();
@@ -38,6 +37,7 @@ public class MergeSort extends SortingAnimationGenerator {
         animations.add(animationEntry);
     }
 
+    // Standard Merge Sort algo
     public void mergeSortAnimation(int start, int end) {
         if (start < end) {
             int middle = (start + end) / 2;
@@ -47,6 +47,7 @@ public class MergeSort extends SortingAnimationGenerator {
         }
     }
 
+    // Have to adopt an in-place sort here because I'm stupid LMAOOOOOOO
     public void merge(int start, int mid, int end) {
         int start2 = mid + 1;
 
