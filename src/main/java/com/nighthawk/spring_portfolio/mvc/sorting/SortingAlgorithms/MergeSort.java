@@ -16,49 +16,69 @@ import lombok.ToString;
 @Data
 public class MergeSort extends SortingAnimationGenerator {
     private ArrayList<HashMap<String, ArrayList<Integer>>> animations;
+
     public MergeSort(int length) {
         super(length);
-        animations = new ArrayList<HashMap<String, ArrayList<Integer>>>();
+        animations = new ArrayList<>();
+        HashMap<String, ArrayList<Integer>> animationEntry = new HashMap<>();
+        ArrayList<Integer> pair = new ArrayList<>();
+        addAnimationEntry(arr, -1, -1);
+        this.mergeSortAnimation(0, length-1);
+        addAnimationEntry(arr, -1, -1);
+
+    }
+
+    public void addAnimationEntry(ArrayList<Integer> sortedArr, int start, int end) {
+        HashMap<String, ArrayList<Integer>> animationEntry = new HashMap<>();
+        ArrayList<Integer> pair = new ArrayList<>();
+        animationEntry.put("arr", new ArrayList<>(arr));
+        pair.add(start);
+        pair.add(end);
+        animationEntry.put("pair", pair);
+        animations.add(animationEntry);
     }
 
     public void mergeSortAnimation(int start, int end) {
         if (start < end) {
-            int middle = (start+end)/2;
+            int middle = (start + end) / 2;
             mergeSortAnimation(start, middle);
-            mergeSortAnimation(middle+1, end);
+            mergeSortAnimation(middle + 1, end);
             merge(start, middle, end);
         }
-        
     }
 
     public void merge(int start, int mid, int end) {
         int start2 = mid + 1;
-        if (arr.get(start2) >= arr.get(start)) {
-            return ;
+
+        // Check if merging is necessary
+        if (arr.get(mid) <= arr.get(start2)) {
+            return;
         }
-        while (start <= mid && start2 <= end+1) {
-            HashMap<String, ArrayList<Integer>> animationEntry = new HashMap<String, ArrayList<Integer>>();
-            ArrayList<Integer> pair = new ArrayList<Integer>();
-            pair.add(start);
-            pair.add(start2);
+
+        // Merge the two halves
+        while (start <= mid && start2 <= end) {
+            addAnimationEntry(arr, start, end);
+
             if (arr.get(start) <= arr.get(start2)) {
-                
                 start++;
             } else {
-                int temp = arr.get(start2);
-                int index = start2;
-                while (index > start) {
-                    arr.set(index, arr.get(index--));
+                int valueToInsert = arr.get(start2);
+                int indexToInsert = start2;
+
+                // Shift elements to the right to make space for the new element
+                while (indexToInsert != start) {
+                    arr.set(indexToInsert, arr.get(indexToInsert - 1));
+                    indexToInsert--;
                 }
-                arr.set(index, temp);
+
+                // Insert the element in its correct position
+                arr.set(start, valueToInsert);
+
+                // Update indices
                 start++;
                 mid++;
                 start2++;
             }
-            animationEntry.put("arr", arr);
-            animationEntry.put("pair", pair); 
-            animations.add(animationEntry);
         }
-
     }
 }

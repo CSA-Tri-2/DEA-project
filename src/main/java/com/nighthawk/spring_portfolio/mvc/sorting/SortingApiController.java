@@ -24,7 +24,7 @@ public class SortingApiController {
     public ResponseEntity<ArrayList<HashMap<String, ArrayList<Integer>>>> getMergeAnimations(@RequestBody MergeRequest request) {
         int length = request.getLength();
         MergeSort mergeSort = new MergeSort(length);
-        mergeSort.mergeSortAnimation(0, length-1);
+        System.out.println(mergeSort.toStringArr());
         return new ResponseEntity<>(mergeSort.getAnimations(), HttpStatus.OK);
 
     }
