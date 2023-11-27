@@ -1,8 +1,7 @@
 package com.nighthawk.spring_portfolio.mvc.fib;
 
 import java.util.ArrayList;
-
-import com.nighthawk.spring_portfolio.mvc.fib.fibmethods.FibFor;  
+import java.util.stream.Stream; 
 
 public class Fibonacci {
     int size;
@@ -40,6 +39,21 @@ public class Fibonacci {
         return fib;
     }
 
+    public ArrayList<Integer> calculateFibonacciRecursive(int i, int nth) {
+        if (i<nth) {
+            if (i == 0) {
+                fib.add(1);
+            } else if (i == 1) {
+                fib.add(1);
+            } else {
+                fib.add(fib.get(i - 2) + fib.get(i - 1));
+            }
+            calculateFibonacciRecursive(i+1, nth);
+        }
+
+        return fib;
+    }
+
     public String toStringArr() {
         int n = this.fib.size();
         String array = "";
@@ -59,7 +73,5 @@ public class Fibonacci {
             ArrayList<Integer> result = fibonacci.calculateFibonacciFor(20);
             System.out.println(result);
         }
-
-        // Print the result
     }
 }
