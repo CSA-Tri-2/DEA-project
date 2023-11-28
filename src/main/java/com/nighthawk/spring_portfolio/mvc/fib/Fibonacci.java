@@ -1,6 +1,7 @@
 package com.nighthawk.spring_portfolio.mvc.fib;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 import java.util.stream.Stream; 
 
 public class Fibonacci {
@@ -54,6 +55,13 @@ public class Fibonacci {
         return fib;
     }
 
+    public ArrayList<Integer> calculateFibonacciStream(int nth) {
+        return Stream.iterate(new int[]{1, 1}, fib -> new int[]{fib[1], fib[0] + fib[1]})
+                .limit(nth)
+                .map(fib -> fib[0])
+                .collect(Collectors.toCollection(ArrayList::new));
+    }
+
     public String toStringArr() {
         int n = this.fib.size();
         String array = "";
@@ -71,6 +79,14 @@ public class Fibonacci {
         }
         else if (type == "for") {
             ArrayList<Integer> result = fibonacci.calculateFibonacciFor(20);
+            System.out.println(result);
+        }
+        else if (type == "recursive") {
+            ArrayList<Integer> result = fibonacci.calculateFibonacciRecursive(0, 20);
+            System.out.println(result);
+        }
+        else if (type == "stream") {
+            ArrayList<Integer> result = fibonacci.calculateFibonacciStream(20);
             System.out.println(result);
         }
     }
