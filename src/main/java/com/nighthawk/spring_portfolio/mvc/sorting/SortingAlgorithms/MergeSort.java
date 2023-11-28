@@ -54,7 +54,7 @@ public class MergeSort extends SortingAnimationGenerator {
         // Check if merging is necessary
         if (arr.get(mid) <= arr.get(start2)) {
             return;
-        }
+        } 
 
         // Merge the two halves
         while (start <= mid && start2 <= end) {
