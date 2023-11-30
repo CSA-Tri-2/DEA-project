@@ -17,8 +17,8 @@ import lombok.ToString;
 public class MergeSort extends SortingAnimationGenerator {
     private ArrayList<HashMap<String, ArrayList<Integer>>> animations;
 
-    public MergeSort(int length) {
-        super(length);
+    public MergeSort(int length, ArrayList<Integer> array) {
+        super(length, array);
         animations = new ArrayList<>(); 
         addAnimationEntry(arr, -1, -1);
         this.mergeSortAnimation(0, length-1);

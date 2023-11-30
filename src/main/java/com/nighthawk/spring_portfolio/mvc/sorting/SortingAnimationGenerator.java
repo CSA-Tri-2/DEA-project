@@ -22,6 +22,10 @@ public class SortingAnimationGenerator {
         }
         Collections.shuffle(arr);
     }
+
+    public SortingAnimationGenerator(int length, ArrayList<Integer> array) {
+        arr = array;
+    }
     
     public String toStringArr() {
         int n = this.arr.size();
