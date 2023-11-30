@@ -24,7 +24,7 @@ public class MvcConfig implements WebMvcConfigurer {
     
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**").allowedOrigins("http://localhost:4000", "https://dea-frontend.vercel.app");
+        registry.addMapping("/**").allowedOrigins("https://dea-frontend.vercel.app");
     }
     
 }
