@@ -17,6 +17,7 @@ public class SortingAnimationGenerator {
 
     public SortingAnimationGenerator(int length) {
         arr = new ArrayList<Integer>();
+        System.out.println("I am ran");
         for (int i = 0; i < length; i++) {
             arr.add(i);
         }
