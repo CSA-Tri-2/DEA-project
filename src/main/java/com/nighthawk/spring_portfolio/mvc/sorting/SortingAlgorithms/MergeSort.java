@@ -20,9 +20,17 @@ public class MergeSort extends SortingAnimationGenerator {
     public MergeSort(int length, ArrayList<Integer> array) {
         super(length, array);
         animations = new ArrayList<>(); 
+        long start = System.nanoTime();
         addAnimationEntry(arr, -1, -1);
         this.mergeSortAnimation(0, length-1);
         addAnimationEntry(arr, -1, -1);
+        long end = System.nanoTime();
+        Integer elapsedTime = (int) (end - start);
+        HashMap<String, ArrayList<Integer>> animationTime = new HashMap<>();
+        ArrayList<Integer> timeValue = new ArrayList<>();
+        timeValue.add(elapsedTime);
+        animationTime.put("time", timeValue);
+        animations.add(animationTime);
 
     }
 
