@@ -22,17 +22,14 @@ public class InsertionSort extends SortingAnimationGenerator {
         super(length);
         animations = new ArrayList<>();
         
-        addAnimationEntry(arr, 1);
+        addAnimationEntry(new ArrayList<>(arr));
         this.insertionSortAnimation();
-        addAnimationEntry(arr, 0);
+        addAnimationEntry(new ArrayList<>(arr));
     }
 
-    public void addAnimationEntry(ArrayList<Integer> sortedArr, int start) {
+    public void addAnimationEntry(ArrayList<Integer> sortedArr) {
         HashMap<String, ArrayList<Integer>> animationEntry = new HashMap<>();
-        ArrayList<Integer> index = new ArrayList<>();
         animationEntry.put("arr", new ArrayList<>(sortedArr));
-        index.add(start);
-        animationEntry.put("index", index);
         animations.add(animationEntry);
     }
 
@@ -49,28 +46,47 @@ public class InsertionSort extends SortingAnimationGenerator {
     public void insertion() {
         // gets array length
         int n = arr.size();
-
+    
         // searches through all values
         for (int i = 1; i < n; i++) {
             // gets original value
             int x = arr.get(i);
             // gets previous value to compare
             int j = i - 1;
-
+            int jVal = arr.get(i - 1);
+    
             // while the index is within the range and if it is greater than the value after it
             while (j >= 0 && arr.get(j) > x) {
+                int oJ = jVal;
+                int oX = x;
+
                 // switch the two values
                 arr.set(j + 1, arr.get(j));
-                
-                j = j - 1;
-                
-            }
+    
+                addAnimationEntry(new ArrayList<>(arr));
+                System.out.println(new ArrayList<>(arr));
+                System.out.println("while loop");
 
+                j = j - 1;
+
+                
+
+                System.out.println("oJ: " + oJ + ", oX: " + oX);
+                System.out.println("step");
+
+
+
+                System.out.println();
+            }
+    
             // move to the next value in the array, setting as new key
             arr.set(j + 1, x);
-            addAnimationEntry(new ArrayList<>(arr), i);
+            
+            addAnimationEntry(new ArrayList<>(arr));
+            System.out.println(new ArrayList<>(arr));
+            System.out.println("for loop");
         }
-
+    
         sorted = true;
-    }
+    }    
 }
