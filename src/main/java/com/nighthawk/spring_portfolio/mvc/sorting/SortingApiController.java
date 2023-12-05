@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.nighthawk.spring_portfolio.mvc.sorting.SortingAlgorithms.MergeSort;
 import com.nighthawk.spring_portfolio.mvc.sorting.SortingAlgorithms.InsertionSort;
+import com.nighthawk.spring_portfolio.mvc.sorting.SortingAlgorithms.QuickSort;
 
 @RestController
 @RequestMapping("/api/sorting")
@@ -28,6 +29,15 @@ public class SortingApiController {
         MergeSort mergeSort = new MergeSort(length, array);
         System.out.println(mergeSort.toStringArr());
         return new ResponseEntity<>(mergeSort.getAnimations(), HttpStatus.OK);
+    }
+
+    @PostMapping("/quick")
+    public ResponseEntity<ArrayList<HashMap<String, ArrayList<Integer>>>> getQuickAnimations(@RequestBody MergeRequest request) {
+        int length = request.getLength();
+        ArrayList<Integer> array = request.getArray();
+        QuickSort quicksort = new QuickSort(length, array);
+        System.out.println(quicksort.toStringArr());
+        return new ResponseEntity<>(quicksort.getAnimations(), HttpStatus.OK);
     }
 
     @PostMapping("/insertion")
