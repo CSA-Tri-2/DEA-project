@@ -63,13 +63,13 @@ public class QuickSort extends SortingAnimationGenerator {
         while(current <= high) {
             if (this.arr.get(current)<pivot) {
                 pivotPos++;
-                this.addAnimationEntry(this.arr, pivot, current, pivotPos);
+                this.addAnimationEntry(this.arr, pivot, current, high);
                 Collections.swap(this.arr, pivotPos, current);
             }
             current++;
         }
-        this.addAnimationEntry(this.arr, pivot, current, pivotPos);
-        Collections.swap(this.arr, pivotPos+1, pivot);
+        this.addAnimationEntry(this.arr, pivot, current, high);
+        Collections.swap(this.arr, pivotPos+1, high);
         return pivotPos+1;
 
     }
