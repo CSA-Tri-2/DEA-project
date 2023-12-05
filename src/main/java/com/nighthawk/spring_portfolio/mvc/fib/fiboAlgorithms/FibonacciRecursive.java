@@ -1,6 +1,8 @@
-package com.nighthawk.spring_portfolio.mvc.fib;
+package com.nighthawk.spring_portfolio.mvc.fib.fiboAlgorithms;
 
 import java.util.ArrayList;
+
+import com.nighthawk.spring_portfolio.mvc.fib.Fibonacci;
 
 public class FibonacciRecursive extends Fibonacci {
     public ArrayList<Integer> FibonacciRecursive(int i, int nth) {

@@ -3,9 +3,6 @@ package com.nighthawk.spring_portfolio.mvc.fib;
 import java.util.ArrayList;
 
 public class Fibonacci {
-    int size;
-    ArrayList<Integer> fib = new ArrayList<>();
-
     public String toStringArr() {
         int n = this.fib.size();
         String array = "";

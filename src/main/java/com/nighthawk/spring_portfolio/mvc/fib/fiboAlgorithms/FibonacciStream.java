@@ -1,7 +1,10 @@
-package com.nighthawk.spring_portfolio.mvc.fib;
+package com.nighthawk.spring_portfolio.mvc.fib.fiboAlgorithms;
 
 import java.util.ArrayList;
-import java.util.stream.Stream; 
+import java.util.stream.Stream;
+
+import com.nighthawk.spring_portfolio.mvc.fib.Fibonacci;
+
 import java.util.stream.Collectors;
 
 public class FibonacciStream extends Fibonacci {
