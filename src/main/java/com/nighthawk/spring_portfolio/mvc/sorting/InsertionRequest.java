@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import java.util.ArrayList;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -11,4 +12,5 @@ import lombok.ToString;
 @Data
 public class InsertionRequest {
     private int length;
+    private ArrayList<Integer> array;
 }
