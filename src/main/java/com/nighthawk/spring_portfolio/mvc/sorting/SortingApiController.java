@@ -43,7 +43,8 @@ public class SortingApiController {
     @PostMapping("/insertion")
     public ResponseEntity<ArrayList<HashMap<String, ArrayList<Integer>>>> getInsertionAnimations(@RequestBody InsertionRequest request) {
         int length = request.getLength();
-        InsertionSort insertionSort = new InsertionSort(length);
+        ArrayList<Integer> array = request.getArray();
+        InsertionSort insertionSort = new InsertionSort(length, array);
         System.out.println(insertionSort.toStringArr());
         return new ResponseEntity<>(insertionSort.getAnimations(), HttpStatus.OK);
     }
