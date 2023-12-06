@@ -1,7 +1,6 @@
 package com.nighthawk.spring_portfolio.mvc.fib;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import org.json.simple.JSONObject;
 import org.springframework.http.HttpStatus;
