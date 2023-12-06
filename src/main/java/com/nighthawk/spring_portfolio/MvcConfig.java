@@ -22,9 +22,9 @@ public class MvcConfig implements WebMvcConfigurer {
     }
 
     
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**").allowedOrigins("https://dea-frontend.vercel.app");
-    }
+    // @Override
+    // public void addCorsMappings(CorsRegistry registry) {
+    //     registry.addMapping("/**").allowedOrigins("https://dea-frontend.vercel.app");
+    // }
     
 }
