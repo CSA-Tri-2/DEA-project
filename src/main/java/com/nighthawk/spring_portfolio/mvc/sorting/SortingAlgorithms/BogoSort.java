@@ -2,6 +2,7 @@ package com.nighthawk.spring_portfolio.mvc.sorting.SortingAlgorithms;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 
 import com.nighthawk.spring_portfolio.mvc.sorting.SortingAnimationGenerator;
 
@@ -14,17 +15,17 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Data
-public class BubbleSort extends SortingAnimationGenerator {
+public class BogoSort extends SortingAnimationGenerator {
 	private ArrayList<HashMap<String, ArrayList<Integer>>> animations;
 	public boolean sorted = false;
 
-	public BubbleSort(int length, ArrayList<Integer> array) {
+	public BogoSort(int length, ArrayList<Integer> array) {
 		super(length, array);
 		animations = new ArrayList<>();
 		long start = System.nanoTime();
 		addAnimationEntry(new ArrayList<>(arr), -1, -1);
-		this.BubbleSortAnimation();
-		addAnimationEntry(new ArrayList<>(arr), -1, -1);
+		this.BogoSortAnimation();
+		addAnimationEntry(new ArrayList<>(arr), -1 , -1);
 		long end = System.nanoTime();
 		Integer elapsedTime = (int) (end - start);
 		HashMap<String, ArrayList<Integer>> animationTime = new HashMap<>();
@@ -36,9 +37,9 @@ public class BubbleSort extends SortingAnimationGenerator {
 
 	public void addAnimationEntry(ArrayList<Integer> sortedArr, int num, int move) {
 		HashMap<String, ArrayList<Integer>> animationEntry = new HashMap<>();
-		ArrayList<Integer> integer = new ArrayList<>();
+        ArrayList<Integer> integer = new ArrayList<>();
 		animationEntry.put("arr", new ArrayList<>(sortedArr));
-		integer.add(num);
+        integer.add(num);
 		integer.add(move);
 		animationEntry.put("int", integer);
 		animations.add(animationEntry);
@@ -48,35 +49,45 @@ public class BubbleSort extends SortingAnimationGenerator {
 		return animations;
 	}
 
-	public void BubbleSortAnimation() {
+	public void BogoSortAnimation() {
 		if (!sorted) {
-			bubble();
+			bogo();
 		}
 	}
 
-	public void bubble() {
-		int n = arr.size();
-		int i, j, temp;
-		boolean swapped;
+	public void bogo() {
+		while (!isSorted(arr)) {
+            int min = 0;
+            int max = 4;
+            int i = min + (int) (Math.random() * (max - min + 1));
+            int j = min + (int) (Math.random() * (max - min + 1));
 
-		for (i = 0; i < n - 1; i++) {
-			swapped = false;
-			for (j = 0; j < n - i - 1; j++) {
-				if (arr.get(j) > arr.get(j + 1)) {
-
-					temp = arr.get(j);
-					arr.set(j, arr.get(j + 1));
-					arr.set(j + 1, temp);
-					addAnimationEntry(arr, j, j + 1);
-					swapped = true;
-				}
-			}
-
-			if (!swapped) {
-				addAnimationEntry(arr, i, j + 1);
-				break;
-			}
-		}
-		sorted = true;
+            shuffle(arr);
+            addAnimationEntry(new ArrayList<>(arr), i, j);
+        }
+        sorted = true;
 	}
+
+    private void shuffle(ArrayList<Integer> a) {
+        Random rand = new Random();
+        for (int i = 1; i < a.size(); i++) {
+            int j = rand.nextInt(i + 1);
+            swap(a, i, j);
+        }
+    }
+
+    private void swap(ArrayList<Integer> a, int i, int j) {
+        int temp = a.get(i);
+        a.set(i, a.get(j));
+        a.set(j, temp);
+    }
+
+    private boolean isSorted(ArrayList<Integer> a) {
+        for (int i = 1; i < a.size(); i++) {
+            if (a.get(i) < a.get(i - 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
