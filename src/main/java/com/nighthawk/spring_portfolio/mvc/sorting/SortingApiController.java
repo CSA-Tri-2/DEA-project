@@ -30,7 +30,7 @@ public class SortingApiController {
         int length = request.getLength();
         ArrayList<Integer> array = request.getArray();
         MergeSort mergeSort = new MergeSort(length, array);
-        System.out.println(mergeSort.toStringArr());
+        System.out.println(mergeSort.swaps);
         return new ResponseEntity<>(mergeSort.getAnimations(), HttpStatus.OK);
     }
 
@@ -39,7 +39,7 @@ public class SortingApiController {
         int length = request.getLength();
         ArrayList<Integer> array = request.getArray();
         QuickSort quicksort = new QuickSort(length, array);
-        System.out.println(quicksort.toStringArr());
+        System.out.println(quicksort.swaps);
         return new ResponseEntity<>(quicksort.getAnimations(), HttpStatus.OK);
     }
 
@@ -48,7 +48,7 @@ public class SortingApiController {
         int length = request.getLength();
         ArrayList<Integer> array = request.getArray();
         InsertionSort insertionSort = new InsertionSort(length, array);
-        System.out.println(insertionSort.toStringArr());
+        System.out.println(insertionSort.swaps);
         return new ResponseEntity<>(insertionSort.getAnimations(), HttpStatus.OK);
     }
 
@@ -57,7 +57,7 @@ public class SortingApiController {
         int length = request.getLength();
         ArrayList<Integer> array = request.getArray();
         BubbleSort bubbleSort = new BubbleSort(length, array);
-        System.out.println(bubbleSort.toStringArr());
+        System.out.println(bubbleSort.swaps);
         return new ResponseEntity<>(bubbleSort.getAnimations(), HttpStatus.OK);
     }
 

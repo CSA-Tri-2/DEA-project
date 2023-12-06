@@ -37,7 +37,6 @@ public class QuickSort extends SortingAnimationGenerator {
         timeValue.add(elapsedTime);
         animationTime.put("time", timeValue);
         animations.add(animationTime);
-        this.swaps++;
     }
 
     // Add an animation entry to the Animations arraylist.
@@ -50,7 +49,7 @@ public class QuickSort extends SortingAnimationGenerator {
         values.add(pivot);
         animationEntry.put("values", values);
         animations.add(animationEntry);
-
+        this.swaps++;
     }
 
     // Standard Merge Sort algo
