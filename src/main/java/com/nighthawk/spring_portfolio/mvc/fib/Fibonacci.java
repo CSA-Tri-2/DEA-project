@@ -3,11 +3,11 @@ package com.nighthawk.spring_portfolio.mvc.fib;
 import java.util.ArrayList;
 
 public class Fibonacci {
-    public String toStringArr() {
-        int n = this.fib.size();
+    public String toStringArr(ArrayList fib) {
+        int n = fib.size();
         String array = "";
         for (int i = 0; i < n; i++) {
-             array = array + this.fib.get(i) + " ";
+             array = array + fib.get(i) + " ";
         }
         return array;
     }

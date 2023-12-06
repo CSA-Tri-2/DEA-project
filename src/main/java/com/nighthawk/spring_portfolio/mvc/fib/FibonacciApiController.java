@@ -28,7 +28,7 @@ public class FibonacciApiController {
         int length = request.getLength();
         FibonacciFor fibonacciFor = new FibonacciFor();
         ArrayList<Integer> fibonacciSeries = fibonacciFor.FibonacciFor(length);
-        System.out.println(fibonacciFor.toStringArr());
+        System.out.println(fibonacciFor.toStringArr(fibonacciSeries));
         return new ResponseEntity<>(fibonacciSeries, HttpStatus.OK);
     }
 
@@ -37,7 +37,7 @@ public class FibonacciApiController {
         int length = request.getLength();
         FibonacciRecursive fibonacciRecursive = new FibonacciRecursive();
         ArrayList<Integer> fibonacciSeries = fibonacciRecursive.FibonacciRecursive(0, length);
-        System.out.println(fibonacciRecursive.toStringArr());
+        System.out.println(fibonacciRecursive.toStringArr(fibonacciSeries));
         return new ResponseEntity<>(fibonacciSeries, HttpStatus.OK);
     }
 
@@ -46,7 +46,7 @@ public class FibonacciApiController {
         int length = request.getLength();
         FibonacciStream fibonacciStream = new FibonacciStream();
         ArrayList<Integer> fibonacciSeries = fibonacciStream.FibonacciStream(length);
-        System.out.println(fibonacciStream.toStringArr());
+        System.out.println(fibonacciStream.toStringArr(fibonacciSeries));
         return new ResponseEntity<>(fibonacciSeries, HttpStatus.OK);
     }
 
@@ -55,7 +55,7 @@ public class FibonacciApiController {
         int length = request.getLength();
         FibonacciWhile fibonacciWhile = new FibonacciWhile();
         ArrayList<Integer> fibonacciSeries = fibonacciWhile.FibonacciWhile(length);
-        System.out.println(fibonacciWhile.toStringArr());
+        System.out.println(fibonacciWhile.toStringArr(fibonacciSeries));
         return new ResponseEntity<>(fibonacciSeries, HttpStatus.OK);
     }
 }

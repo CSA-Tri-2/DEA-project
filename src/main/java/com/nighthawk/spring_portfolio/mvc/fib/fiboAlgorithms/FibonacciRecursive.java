@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.nighthawk.spring_portfolio.mvc.fib.Fibonacci;
 
 public class FibonacciRecursive extends Fibonacci {
+    ArrayList<Integer> fib = new ArrayList<>();
     public ArrayList<Integer> FibonacciRecursive(int i, int nth) {
         if (i<nth) {
             if (i == 0) {
