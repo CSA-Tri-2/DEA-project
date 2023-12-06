@@ -31,6 +31,11 @@ public class InsertionSort extends SortingAnimationGenerator {
         Integer elapsedTime = (int) (end - start);
         HashMap<String, ArrayList<Integer>> animationTime = new HashMap<>();
         ArrayList<Integer> timeValue = new ArrayList<>();
+        HashMap<String, ArrayList<Integer>> animationSwaps = new HashMap<>();
+		ArrayList<Integer> swapsValue = new ArrayList<>();
+		swapsValue.add(this.swaps);
+		animationSwaps.put("swaps", swapsValue);
+		animations.add(animationSwaps);
         timeValue.add(elapsedTime);
         animationTime.put("time", timeValue);
         animations.add(animationTime);
@@ -44,6 +49,7 @@ public class InsertionSort extends SortingAnimationGenerator {
         integer.add(move + 1);
         animationEntry.put("int", integer);
         animations.add(animationEntry);
+        this.swaps++;
     }
 
     public ArrayList<HashMap<String, ArrayList<Integer>>> getAnimations() {

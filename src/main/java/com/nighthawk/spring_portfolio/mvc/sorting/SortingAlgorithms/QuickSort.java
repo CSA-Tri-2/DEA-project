@@ -20,7 +20,7 @@ public class QuickSort extends SortingAnimationGenerator {
 
     public QuickSort(int length, ArrayList<Integer> array) {
         super(length, array);
-        animations = new ArrayList<>(); 
+        animations = new ArrayList<>();
         long start = System.nanoTime();
         this.addAnimationEntry(this.arr, -1, -1, -1);
         this.quickSortAnimation(0, length-1);
@@ -29,10 +29,15 @@ public class QuickSort extends SortingAnimationGenerator {
         Integer elapsedTime = (int) (end - start);
         HashMap<String, ArrayList<Integer>> animationTime = new HashMap<>();
         ArrayList<Integer> timeValue = new ArrayList<>();
+        HashMap<String, ArrayList<Integer>> animationSwaps = new HashMap<>();
+		ArrayList<Integer> swapsValue = new ArrayList<>();
+		swapsValue.add(this.swaps);
+		animationSwaps.put("swaps", swapsValue);
+		animations.add(animationSwaps);
         timeValue.add(elapsedTime);
         animationTime.put("time", timeValue);
         animations.add(animationTime);
-
+        this.swaps++;
     }
 
     // Add an animation entry to the Animations arraylist.
@@ -45,6 +50,7 @@ public class QuickSort extends SortingAnimationGenerator {
         values.add(pivot);
         animationEntry.put("values", values);
         animations.add(animationEntry);
+
     }
 
     // Standard Merge Sort algo

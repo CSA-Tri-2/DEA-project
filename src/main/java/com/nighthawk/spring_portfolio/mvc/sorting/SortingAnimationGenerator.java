@@ -12,8 +12,9 @@ import java.util.Collections;
 @AllArgsConstructor
 @ToString
 @Data
-public class SortingAnimationGenerator {
+public abstract class SortingAnimationGenerator {
     protected ArrayList<Integer> arr;
+    protected int swaps;
 
     public SortingAnimationGenerator(int length) {
         arr = new ArrayList<Integer>();
