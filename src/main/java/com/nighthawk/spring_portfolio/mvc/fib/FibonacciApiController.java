@@ -25,7 +25,12 @@ public class FibonacciApiController {
     @PostMapping("/fibFor")
     public ResponseEntity<ArrayList<Integer>> getFibonacciFor(@RequestBody FibRequest request) {
         int length = request.getLength();
+
+        int startTime = (int)System.currentTimeMillis();
         FibonacciFor fibonacciFor = new FibonacciFor();
+        int endTime = (int)System.currentTimeMillis();
+        int elapsedTime = endTime - startTime;
+
         ArrayList<Integer> fibonacciSeries = fibonacciFor.FibonacciFor(length);
         System.out.println(fibonacciFor.toStringArr(fibonacciSeries));
         return new ResponseEntity<>(fibonacciSeries, HttpStatus.OK);
@@ -34,7 +39,12 @@ public class FibonacciApiController {
     @PostMapping("/fibRecursive")
     public ResponseEntity<ArrayList<Integer>> getFibonacciRecursive(@RequestBody FibRequest request) {
         int length = request.getLength();
+
+        int startTime = (int)System.currentTimeMillis();
         FibonacciRecursive fibonacciRecursive = new FibonacciRecursive();
+        int endTime = (int)System.currentTimeMillis();
+        int elapsedTime = endTime - startTime;
+
         ArrayList<Integer> fibonacciSeries = fibonacciRecursive.FibonacciRecursive(0, length);
         System.out.println(fibonacciRecursive.toStringArr(fibonacciSeries));
         return new ResponseEntity<>(fibonacciSeries, HttpStatus.OK);
@@ -43,7 +53,12 @@ public class FibonacciApiController {
     @PostMapping("/fibStream")
     public ResponseEntity<ArrayList<Integer>> getFibonacciStream(@RequestBody FibRequest request) {
         int length = request.getLength();
+
+        int startTime = (int)System.currentTimeMillis();
         FibonacciStream fibonacciStream = new FibonacciStream();
+        int endTime = (int)System.currentTimeMillis();
+        int elapsedTime = endTime - startTime;
+
         ArrayList<Integer> fibonacciSeries = fibonacciStream.FibonacciStream(length);
         System.out.println(fibonacciStream.toStringArr(fibonacciSeries));
         return new ResponseEntity<>(fibonacciSeries, HttpStatus.OK);
@@ -52,7 +67,12 @@ public class FibonacciApiController {
     @PostMapping("/fibWhile")
     public ResponseEntity<ArrayList<Integer>> getFibonacciWhile(@RequestBody FibRequest request) {
         int length = request.getLength();
+
+        int startTime = (int)System.currentTimeMillis();
         FibonacciWhile fibonacciWhile = new FibonacciWhile();
+        int endTime = (int)System.currentTimeMillis();
+        int elapsedTime = endTime - startTime;
+
         ArrayList<Integer> fibonacciSeries = fibonacciWhile.FibonacciWhile(length);
         System.out.println(fibonacciWhile.toStringArr(fibonacciSeries));
         return new ResponseEntity<>(fibonacciSeries, HttpStatus.OK);
