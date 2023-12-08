@@ -16,7 +16,7 @@ import com.nighthawk.spring_portfolio.mvc.fib.fiboAlgorithms.FibonacciStream;
 import com.nighthawk.spring_portfolio.mvc.fib.fiboAlgorithms.FibonacciWhile;
 
 @RestController
-@RequestMapping("/api/sorting")
+@RequestMapping("/api/fibo")
 public class FibonacciApiController {
     private JSONObject body; // last run result
     private HttpStatus status; // last run status
