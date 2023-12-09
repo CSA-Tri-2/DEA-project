@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import org.json.simple.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,13 +16,13 @@ import com.nighthawk.spring_portfolio.mvc.fib.fiboAlgorithms.FibonacciStream;
 import com.nighthawk.spring_portfolio.mvc.fib.fiboAlgorithms.FibonacciWhile;
 
 @RestController
-@RequestMapping("/api/fibo")
+@RequestMapping("/api/fib")
 public class FibonacciApiController {
     private JSONObject body; // last run result
     private HttpStatus status; // last run status
     String last_run = null; // last run day of month
 
-    @PostMapping("/fibFor")
+    @GetMapping("/fibFor")
     public ResponseEntity<ArrayList<Integer>> getFibonacciFor(@RequestBody FibRequest request) {
         int startTime = (int)System.currentTimeMillis();
 
@@ -37,7 +37,7 @@ public class FibonacciApiController {
         return new ResponseEntity<>(fibonacciSeries, HttpStatus.OK);
     }
 
-    @PostMapping("/fibRecursive")
+    @GetMapping("/fibRecursive")
     public ResponseEntity<ArrayList<Integer>> getFibonacciRecursive(@RequestBody FibRequest request) {
         int startTime = (int)System.currentTimeMillis();
 
@@ -52,7 +52,7 @@ public class FibonacciApiController {
         return new ResponseEntity<>(fibonacciSeries, HttpStatus.OK);
     }
 
-    @PostMapping("/fibStream")
+    @GetMapping("/fibStream")
     public ResponseEntity<ArrayList<Integer>> getFibonacciStream(@RequestBody FibRequest request) {
         int startTime = (int)System.currentTimeMillis();
 
@@ -67,7 +67,7 @@ public class FibonacciApiController {
         return new ResponseEntity<>(fibonacciSeries, HttpStatus.OK);
     }
 
-    @PostMapping("/fibWhile")
+    @GetMapping("/fibWhile")
     public ResponseEntity<ArrayList<Integer>> getFibonacciWhile(@RequestBody FibRequest request) {
         int startTime = (int)System.currentTimeMillis();
 
