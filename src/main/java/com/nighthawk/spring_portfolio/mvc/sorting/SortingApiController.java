@@ -17,6 +17,7 @@ import com.nighthawk.spring_portfolio.mvc.sorting.SortingAlgorithms.QuickSort;
 import com.nighthawk.spring_portfolio.mvc.sorting.SortingAlgorithms.BubbleSort;
 import com.nighthawk.spring_portfolio.mvc.sorting.SortingAlgorithms.BogoSort;
 import com.nighthawk.spring_portfolio.mvc.sorting.SortingAlgorithms.HeapSort;
+import com.nighthawk.spring_portfolio.mvc.sorting.SortingAlgorithms.SelectionSort;
 
 @RestController
 @RequestMapping("/api/sorting")
@@ -77,5 +78,14 @@ public class SortingApiController {
         HeapSort heapSort = new HeapSort(length, array);
         System.out.println(heapSort.toStringArr());
         return new ResponseEntity<>(heapSort.getAnimations(), HttpStatus.OK);
+    }
+
+    @PostMapping("/selection")
+    public ResponseEntity<ArrayList<HashMap<String, ArrayList<Integer>>>> getHeapAnimations(@RequestBody SelectionRequest request) {
+        int length = request.getLength();
+        ArrayList<Integer> array = request.getArray();
+        SelectionSort selectionSort = new SelectionSort(length, array);
+        System.out.println(selectionSort.toStringArr());
+        return new ResponseEntity<>(selectionSort.getAnimations(), HttpStatus.OK);
     }
 }
