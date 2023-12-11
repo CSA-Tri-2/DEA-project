@@ -65,23 +65,22 @@ public class SelectionSort extends SortingAnimationGenerator {
 		int i, j, temp;
 		boolean swapped;
 
-		for (i=0; i < n - 1; i++) {
+		for (i = 0; i < n - 1; i++) {
 			swapped = false;
 			int min_idx = i;
-			for (j = 0; j < n - i - 1; j++) {
-				if (arr.get(j) > arr.get(min_idx)) {
+			for (j = i + 1; j < n; j++) {
+				if (arr.get(j) < arr.get(min_idx)) {
 					min_idx = j;
+					swapped = true; // Set swapped to true when a swap occurs
 				}
-				temp = arr.get(min_idx);
-				arr.set(min_idx, arr.get(i));
-				arr.set(i, temp);
 			}
 
-			if (!swapped) {
-				addAnimationEntry(arr, i, j + 1);
-				break;
-			}
+			temp = arr.get(min_idx);
+			arr.set(min_idx, arr.get(i));
+			arr.set(i, temp);
+			addAnimationEntry(new ArrayList<>(arr), i, j + 1);
 		}
+
 		sorted = true;
 	}
 }
